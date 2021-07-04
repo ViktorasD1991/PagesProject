@@ -19,7 +19,7 @@ class ImageSeeder extends Seeder
         foreach ($contents as $content) {
             Images::updateOrCreate([
                 'name' => $content['basename'],
-                'path' => $content['path']
+                'path' => 'public/' . $content['path']
             ]);
         }
     }

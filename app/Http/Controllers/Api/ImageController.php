@@ -89,7 +89,7 @@ class ImageController extends Controller
             $request->route()->parameter('imageId')
         );
 
-        \Storage::disk('local')->delete('public/'.$image->path);
+        \Storage::disk('local')->delete($image->path);
 
         return response()->json([],204);
     }
